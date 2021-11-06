@@ -25,7 +25,7 @@
 
 
             <div class="card border-success mb-3">
-                <form action="{{ url ('/save') }}" method="POST">
+                <form action="{{ url ('/save') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="card-header text-center text-white bg-success">AGREGAR CRIPTOMONEDA</div>
 
@@ -46,9 +46,10 @@
                             <input type="text" name="descripcion" class="form-control col-md-9" placeholder="descripcion">
                         </div>
 
+                        <!--para el formulario de imagenes-->
                         <div class="row form-group">
-                            <label for="" class="col-2.7 mr-3">Logotipo</label>
-                            <input type="text" name="logotipo" class="form-control col-md-9" placeholder="descripcion">
+                            <label for="" class="col-2" >Logotipo</label>
+                            <input type="file" name="logotipo" class="img-fluid">
                         </div>
 
                         <div class="row form-group">

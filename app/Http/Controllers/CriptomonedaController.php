@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use App\Criptomoneda;
 use App\lenguajeProgramacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CriptomonedaController extends Controller
 {
     //Formulario criptomoneda
     public function form(){
 
-        $lenguaje=lenguajeProgramacion::all();
-
-        return view('criptomonedas.form', compact('lenguaje'));
+        return view('criptomonedas.form');
     }
 
     //Guardar criptomonedas
@@ -26,11 +25,18 @@ class CriptomonedaController extends Controller
             'logotipo' => 'required',
         ]);
 
+        //condiciones para guardar imagenes
+
+        if($request->hasFile('logotipo')){
+            $ver['logotipo'] = $request-> file('logotipo')->store('logotipos','public');
+        }
+
+
         Criptomoneda::create([
             'nombre'=>$validator['nombre'],
             'precio'=>$validator['precio'],
             'descripcion'=> $validator['descripcion'],
-            'logotipo'=>$validator['logotipo'],
+            'logotipo'=>$ver['logotipo'],
         ]);
 
         return back()->with('criptomonedaGuardado', "Criptomoneda Guardada");
