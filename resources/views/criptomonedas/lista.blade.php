@@ -32,6 +32,10 @@
                         <td class="border border-secondary">
                             <div class="btn-group"><!--Para que los bonotes-->
 
+                                <a href="{{route('editform', $cripto->id)}}" class="btn btn-primary mb-3 mr-2">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+
                                 <form action="{{route('delete', $cripto->id)}}" method="POST">
                                     @csrf @method('DELETE')
 

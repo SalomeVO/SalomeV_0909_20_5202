@@ -57,10 +57,10 @@ class CriptomonedaController extends Controller
         return back()->with('criptomonedaGuardado', "Criptomoneda Guardada");
     }
 
-    //Eliminar usuarios
+    //Eliminar criptomonedas
     public function delete($id){
 
-        $criptomoneda =Criptomoneda::findOrFail($id); //para buscar todos los datos
+        $criptomoneda = Criptomoneda::findOrFail($id); //para buscar todos los datos
 
         //para que borre la imagen en BD y en Codigo
         if (Storage::delete('public/'.$criptomoneda->logotipo)){
@@ -71,5 +71,33 @@ class CriptomonedaController extends Controller
         return back()->with('criptomonedaEliminado', 'Criptomoneda eliminada');
     }
 
+    //Formulario para editar criptomoneda
+    public function editform($id){
+
+        //se agrego para rol
+        $lenguaje=lenguajeProgramacion::all();
+
+        $criptomoneda= Criptomoneda::findOrFail($id);
+
+        return view('criptomonedas.editform', compact('criptomoneda','lenguaje'));
+    }
+
+    //Editar criptomoneda
+    public function edit(Request $request, $id){
+
+        $datosCriptomoneda = request()->except((['_token', '_method']));
+
+        //para editar las imagenes
+        if($request->hasFile('logotipo')){
+
+            $criptomoneda = Criptomoneda::findOrFail($id);
+            Storage::delete('public/'.$criptomoneda->logotipo);
+            $datosCriptomoneda ['logotipo'] = $request-> file('logotipo')->store('logotipos','public');
+        };
+
+        Criptomoneda::where('id', '=', $id)->update($datosCriptomoneda);
+
+        return back()->with('criptomonedaModificada','Criptomoneda Modificada');
+    }
 
 }

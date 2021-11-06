@@ -60,7 +60,7 @@
                                     <select name="lenguaje_id" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
                                         <option class="align-self-center text-center" value="">--Lenguaje de Programacion--</option>
 
-                                        @foreach( $lenguaje as $lenguajes)
+                                        @foreach($lenguaje as $lenguajes)
                                             <option value="{{$lenguajes->id_lenguaje}}"> {{$lenguajes->lenguaje_descripcion}}  </option>
                                         @endforeach
 
