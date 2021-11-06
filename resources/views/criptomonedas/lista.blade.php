@@ -14,6 +14,7 @@
                     <th class="border border-dark" >Precio</th>
                     <th class="border border-dark" >Descripcion</th>
                     <th class="border border-dark" >Lenguaje de Programacion</th>
+                    <th class="border border-dark">Acciones</th>
                 </tr>
                 </thead>
 
@@ -27,7 +28,21 @@
                         <td class="border border-secondary" >{{$cripto->nombre}}</td>
                         <td class="border border-secondary" >{{$cripto->precio}}</td>
                         <td class="border border-secondary" >{{$cripto->descripcion}}</td>
-                        <td class="border border-secondary" >{{$cripto->lenguaje_descripcion}}</td><!--para la columna rol-->
+                        <td class="border border-secondary" >{{$cripto->lenguaje_descripcion}}</td><!--para la columna lenguaje_descripcion-->
+                        <td class="border border-secondary">
+                            <div class="btn-group"><!--Para que los bonotes-->
+
+                                <form action="{{route('delete', $cripto->id)}}" method="POST">
+                                    @csrf @method('DELETE')
+
+                                    <button type="submit" onclick="return confirm('¿Seguro de eliminar el usuario?')" class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+
+                                </form>
+
+                            </div>
+                        </td>
                     </tr>
                 @endforeach
 

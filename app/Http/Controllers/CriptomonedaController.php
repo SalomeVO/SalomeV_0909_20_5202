@@ -56,4 +56,20 @@ class CriptomonedaController extends Controller
 
         return back()->with('criptomonedaGuardado', "Criptomoneda Guardada");
     }
+
+    //Eliminar usuarios
+    public function delete($id){
+
+        $criptomoneda =Criptomoneda::findOrFail($id); //para buscar todos los datos
+
+        //para que borre la imagen en BD y en Codigo
+        if (Storage::delete('public/'.$criptomoneda->logotipo)){
+
+            Criptomoneda::destroy($id);
+        }
+
+        return back()->with('criptomonedaEliminado', 'Criptomoneda eliminada');
+    }
+
+
 }

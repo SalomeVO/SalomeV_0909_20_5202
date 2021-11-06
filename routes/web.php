@@ -19,5 +19,8 @@ Route::get('/', "CriptomonedaController@lista");
 //para llegar al formulario
 Route::get("/form", "CriptomonedaController@form");
 
-//aguardar criptomonedas
+//para aguardar criptomonedas
 Route::post("/save", "CriptomonedaController@save")->name("save");
+
+//para eliminar criptomonedas
+Route::delete('/delete/{id}','CriptomonedaController@delete')->name('delete');
