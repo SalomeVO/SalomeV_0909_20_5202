@@ -17,4 +17,8 @@ Route::get('/', function () {
     return view('criptomonedas.lista');
 });
 
+//para llegar al formulario
 Route::get("/form", "CriptomonedaController@form");
+
+//aguardar criptomonedas
+Route::post("/save", "CriptomonedaController@save")->name("save");
