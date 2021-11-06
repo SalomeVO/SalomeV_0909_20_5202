@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('criptomonedas.lista');
 });
+
+Route::get("/form", "CriptomonedaController@form");
