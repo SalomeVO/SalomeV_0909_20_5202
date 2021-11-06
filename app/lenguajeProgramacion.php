@@ -9,7 +9,7 @@ class lenguajeProgramacion extends Model
     protected $table='lenguaje_programacion';
     public $timestamps=false;
     protected $fillable=[
-        'id_lenguaje', 'descripcion'
+        'id_lenguaje', 'lenguaje_descripcion'
     ];
 
     protected $primaryKey='id_lenguaje';

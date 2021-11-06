@@ -13,6 +13,7 @@
                     <th class="border border-dark" >Nombre</th>
                     <th class="border border-dark" >Precio</th>
                     <th class="border border-dark" >Descripcion</th>
+                    <th class="border border-dark" >Lenguaje de Programacion</th>
                 </tr>
                 </thead>
 
@@ -25,7 +26,8 @@
                         </td>
                         <td class="border border-secondary" >{{$cripto->nombre}}</td>
                         <td class="border border-secondary" >{{$cripto->precio}}</td>
-                        <td class="border border-secondary" >{{$cripto->descripcion}}</td><!--para la columna rol-->
+                        <td class="border border-secondary" >{{$cripto->descripcion}}</td>
+                        <td class="border border-secondary" >{{$cripto->lenguaje_descripcion}}</td><!--para la columna rol-->
                     </tr>
                 @endforeach
 

@@ -52,6 +52,23 @@
                             <input type="file" name="logotipo" class="img-fluid">
                         </div>
 
+                        <!--para el lenguaje de programacion-->
+                        <div class="row mb-3">
+                            <div class="col-6 offset-3">
+                                <div class="form-group">
+                                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Lenguaje de Programacion</label>
+                                    <select name="lenguaje_id" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                                        <option class="align-self-center text-center" value="">--Lenguaje de Programacion--</option>
+
+                                        @foreach( $lenguaje as $lenguajes)
+                                            <option value="{{$lenguajes->id_lenguaje}}"> {{$lenguajes->lenguaje_descripcion}}  </option>
+                                        @endforeach
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="row form-group">
                             <button type="submit" class="btn btn-success col-md-9 offset-2 text-dark" style="background-color: #3CB371;">Guardar</button>
                         </div>
