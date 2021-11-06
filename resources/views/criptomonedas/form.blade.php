@@ -1,4 +1,6 @@
 @extends('layouts.vistaprincipal')
+@section('title', 'Formulario C')
+@section('content')
 
 <div class="container mt-5">
 
@@ -80,3 +82,4 @@
         </div>
     </div>
 </div>
+@endsection

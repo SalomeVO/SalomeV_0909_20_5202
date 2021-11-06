@@ -1,4 +1,6 @@
 @extends('layouts.vistaprincipal')
+@section('title', 'Edit C')
+@section('content')
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -40,7 +42,7 @@
                         </div>
 
                         <div class="row form-group">
-                            <label for="" class="col-2">Descripcion</label>
+                            <label for="" class="col-2.7 mr-3">Descripcion</label>
                             <input type="text" name="descripcion" class="form-control col-md-9" value="{{ $criptomoneda->descripcion}}" placeholder="descripcion">
                         </div>
 
@@ -78,3 +80,5 @@
         </div>
     </div>
 </div>
+@endsection
+
