@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\Storage;
 
 class CriptomonedaController extends Controller
 {
+    //Lista de criptomonedas
+    public function lista(){
+
+        $criptomoneda['criptomonedas'] = Criptomoneda::paginate(3);
+
+        return view('criptomonedas.lista', $criptomoneda);
+
+    }
+
     //Formulario criptomoneda
     public function form(){
 
@@ -25,8 +34,7 @@ class CriptomonedaController extends Controller
             'logotipo' => 'required',
         ]);
 
-        //condiciones para guardar imagenes
-
+        //Guardar imagenes/logotipos
         if($request->hasFile('logotipo')){
             $ver['logotipo'] = $request-> file('logotipo')->store('logotipos','public');
         }

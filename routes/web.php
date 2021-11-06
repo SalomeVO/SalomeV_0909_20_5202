@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('criptomonedas.lista');
-});
+//para visualizar la lista de criptomonedas
+Route::get('/', "CriptomonedaController@lista");
 
 //para llegar al formulario
 Route::get("/form", "CriptomonedaController@form");
