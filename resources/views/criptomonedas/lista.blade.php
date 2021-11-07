@@ -9,6 +9,13 @@
 
             <a class="btn btn-success mb-4" href="{{url('/form')}}">AGREGAR</a>
 
+            <!--Mensaje de criptomoneda eliminada-->
+            @if(session('criptomonedaEliminado'))
+            <div class="alert alert-danger">
+              {{session('criptomonedaEliminado')}}
+            </div>
+            @endif
+
             <table class="table table-bordered table-striped text-center">
                 <thead>
                 <tr class="table-success">

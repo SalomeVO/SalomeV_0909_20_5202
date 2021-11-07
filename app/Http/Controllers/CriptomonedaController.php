@@ -68,7 +68,7 @@ class CriptomonedaController extends Controller
             Criptomoneda::destroy($id);
         }
 
-        return back()->with('criptomonedaEliminado', 'Criptomoneda eliminada');
+        return back()->with('criptomonedaEliminado', 'Criptomoneda Eliminado');
     }
 
     //Formulario para editar criptomoneda
@@ -98,6 +98,13 @@ class CriptomonedaController extends Controller
         Criptomoneda::where('id', '=', $id)->update($datosCriptomoneda);
 
         return back()->with('criptomonedaModificada','Criptomoneda Modificada');
+    }
+
+    //para la lista
+    public function lP_ruta(){
+        $data['lenguajes'] = lenguajeProgramacion::paginate(3);
+
+        return view('lenguajes.lista_lenguaje', $data);
     }
 
 }

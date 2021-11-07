@@ -35,7 +35,7 @@
                           <a class="dropdown-item" href="{{url('/')}}">Lista</a>
                           <a class="dropdown-item" href="{{url('/form')}}">Agregar</a>
                           <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="">Tabla Lenguaje de Programacion</a>
+                          <a class="dropdown-item" href="{{url('/lP_ruta')}}">Tabla Lenguaje de Programacion</a>
                           <a class="dropdown-item" href="">Lista</a>
                           <a class="dropdown-item" href="">Agregar</a>
                       </div>
