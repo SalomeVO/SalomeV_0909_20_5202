@@ -8,11 +8,20 @@
 
                 <a class="btn btn-success mb-4" href="{{url('/formLP')}}">AGREGAR</a>
 
+                <!--Mensaje de lenguaje eliminado-->
+                @if(session('lenguajeEliminado'))
+                    <div class="alert alert-danger">
+                        {{session('lenguajeEliminado')}}
+                    </div>
+                @endif
+
+
                 <table class="table table-bordered table-striped text-center">
                     <thead>
                     <tr style="background-color: #9370D8;">
                         <th>ID</th>
                         <th>Descripcion</th>
+                        <th>Acciones</th>
                     </tr>
                     </thead>
 
@@ -21,6 +30,20 @@
                         <tr>
                             <td>{{$lenguaje->id_lenguaje}}</td>
                             <td>{{$lenguaje->lenguaje_descripcion}}</td>
+                            <td>
+                                <div class="btn-group"><!--Para que los bonotes-->
+
+                                    <form action="{{route('deleteLP', $lenguaje->id_lenguaje)}}" method="POST">
+                                        @csrf @method('DELETE')
+
+                                        <button type="submit" onclick="return confirm('¿Seguro de eliminar el lenguaje de programacion?')" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+
+                                    </form>
+
+                                </div>
+                            </td>
                         </tr>
                     @endforeach
 

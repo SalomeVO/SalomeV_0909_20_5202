@@ -157,7 +157,8 @@ return [
         'lenguaje_descripcion'=>[
             'required' => 'Es necesario llenar el campo',
             'string' => 'Debe ser un texto',
-            'max:45' => 'Muy largo el nombre'
+            'max:45' => 'Muy largo el nombre',
+            'unique' => 'Lenguaje repetido',
          ]
 
     ],

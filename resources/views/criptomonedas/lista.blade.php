@@ -49,7 +49,7 @@
                                 <form action="{{route('delete', $cripto->id)}}" method="POST">
                                     @csrf @method('DELETE')
 
-                                    <button type="submit" onclick="return confirm('¿Seguro de eliminar el usuario?')" class="btn btn-danger">
+                                    <button type="submit" onclick="return confirm('¿Seguro de eliminar la criptomoneda?')" class="btn btn-danger">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
 

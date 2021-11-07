@@ -74,7 +74,7 @@ class CriptomonedaController extends Controller
     //Formulario para editar criptomoneda
     public function editform($id){
 
-        //se agrego para rol
+        //se agrego para descripcion
         $lenguaje=lenguajeProgramacion::all();
 
         $criptomoneda= Criptomoneda::findOrFail($id);

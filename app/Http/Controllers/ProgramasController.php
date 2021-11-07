@@ -20,17 +20,25 @@ class ProgramasController extends Controller
         return view('lenguajes.form_lenguaje');
     }
 
-    //Guardar criptomonedas
+    //Guardar lenguaje de programacion
     public function guardar(Request $request)
     {
         $validator_l = $this->validate($request, [
-            'lenguaje_descripcion'=>'required|string|max:45',
+            'lenguaje_descripcion'=>'required|string|max:45|unique:lenguaje_programacion',
         ]);
 
         lenguajeProgramacion::create([
             'lenguaje_descripcion'=> $validator_l['lenguaje_descripcion'],
         ]);
 
-        return back()->with('lenguajeGuardado', "Criptomoneda Guardada");
+        return back()->with('lenguajeGuardado', "Lenguaje Guardada");
+    }
+
+    //Eliminar lenguaje de programacion
+    public function deleteLP($id_lenguaje){
+
+        lenguajeProgramacion::destroy($id_lenguaje);
+
+        return back()->with('lenguajeEliminado', 'Lenguaje Eliminado');
     }
 }
