@@ -152,7 +152,13 @@ return [
 
         'lenguaje_id' => [
             'required' => 'Seleccione un lenguaje de programacion',
-        ]
+        ],
+
+        'lenguaje_descripcion'=>[
+            'required' => 'Es necesario llenar el campo',
+            'string' => 'Debe ser un texto',
+            'max:45' => 'Muy largo el nombre'
+         ]
 
     ],
 

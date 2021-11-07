@@ -39,3 +39,6 @@ Route::get('/lP_ruta', 'ProgramasController@lP_ruta')->name('lP_ruta');
 //para llegar al formulario de lenguaje de programacion
 Route::get('/formLP', "ProgramasController@formLP");
 
+//para aguardar lenguaje de programacion
+Route::post("/guardar", "ProgramasController@guardar")->name("guardar");
+
