@@ -4,7 +4,7 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-7 mt-5">
+        <div class="col-md-7 mt-6">
             <!--Mensaje de error-->
             @if(session("criptomonedaModificada"))
                 <div class="alert alert-success">
@@ -23,7 +23,7 @@
                 </div>
             @endif
 
-            <div class="card border-primary" style="background-color: #F8F8FF;">
+            <div class="card border-primary mt-3" style="background-color: #F8F8FF;">
                 <form action="{{ route('edit', $criptomoneda->id)}}" method="POST" enctype="multipart/form-data"><!--para que acepte imagenes-->
                     @csrf @method('PATCH')
 
@@ -32,18 +32,18 @@
                     <div class="card-body">
 
                         <div class="row form-group">
-                            <label for="" class="col-2">Nombre</label>
-                            <input type="text" name="nombre" class="form-control col-md-9" value="{{ $criptomoneda->nombre }}" placeholder="nombre">
+                            <label for="" class="col-3">Nombre</label>
+                            <input type="text" name="nombre" class="form-control col-md-8" value="{{ $criptomoneda->nombre }}" placeholder="nombre">
                         </div>
 
                         <div class="row form-group">
-                            <label for="" class="col-2">Precio</label>
-                            <input type="float" name="precio" class="form-control col-md-9" value="{{ $criptomoneda->precio }}" placeholder="00.00">
+                            <label for="" class="col-3">Precio</label>
+                            <input type="float" name="precio" class="form-control col-md-8" value="{{ $criptomoneda->precio }}" placeholder="00.00">
                         </div>
 
                         <div class="row form-group">
-                            <label for="" class="col-2.7 mr-3">Descripcion</label>
-                            <input type="text" name="descripcion" class="form-control col-md-9" value="{{ $criptomoneda->descripcion}}" placeholder="descripcion">
+                            <label for="" class="col-3">Descripcion</label>
+                            <input type="text" name="descripcion" class="form-control col-md-8" value="{{ $criptomoneda->descripcion}}" placeholder="descripcion">
                         </div>
 
                         <!--para imagenes-->
@@ -70,7 +70,8 @@
                         </div>
 
                         <div class="row form-group">
-                            <button type="submit" class="btn btn-primary col-md-9 offset-2 text-dark" style="background-color: #00BFFF;">Modificar</button>
+                            <button type="submit" class="btn btn-primary col-md-8 offset-2 text-dark mb-1" style="background-color: #00BFFF;">Modificar</button>
+                            <a class="btn btn-light col-md-8 offset-2 border border-secondary" href="{{url('/')}}" role="button">Regresar</a>
                         </div>
 
                     </div>

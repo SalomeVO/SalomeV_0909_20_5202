@@ -34,18 +34,18 @@
                     <div class="card-body" style="background-color: #F8F8FF;" >
 
                         <div class="row form-group">
-                            <label for="" class="col-2">Nombre</label>
-                            <input type="text" name="nombre" class="form-control col-md-9" placeholder="nombre">
+                            <label for="" class="col-3">Nombre</label>
+                            <input type="text" name="nombre" class="form-control col-md-8" placeholder="nombre">
                         </div>
 
                         <div class="row form-group">
-                            <label for="" class="col-2">Precio</label>
-                            <input type="float" name="precio" class="form-control col-md-9" placeholder="00.00">
+                            <label for="" class="col-3">Precio</label>
+                            <input type="float" name="precio" class="form-control col-md-8" placeholder="00.00">
                         </div>
 
                         <div class="row form-group">
-                            <label for="" class="col-2.7 mr-3">Descripcion</label>
-                            <input type="text" name="descripcion" class="form-control col-md-9" placeholder="descripcion">
+                            <label for="" class="col-3">Descripcion</label>
+                            <input type="text" name="descripcion" class="form-control col-md-8" placeholder="descripcion">
                         </div>
 
                         <!--para el formulario de imagenes-->
@@ -71,8 +71,9 @@
                             </div>
                         </div>
 
-                        <div class="row form-group">
-                            <button type="submit" class="btn btn-success col-md-9 offset-2 text-dark" style="background-color: #3CB371;">Guardar</button>
+                        <div class="row form-group gap-2">
+                            <button type="submit" class="btn btn-success col-md-8 offset-2 text-dark mb-1" style="background-color: #3CB371;">Guardar</button>
+                            <a class="btn btn-light col-md-8 offset-2 border border-secondary" href="{{url('/')}}" role="button">Regresar</a>
                         </div>
 
                     </div>

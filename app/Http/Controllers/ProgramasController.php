@@ -31,7 +31,7 @@ class ProgramasController extends Controller
             'lenguaje_descripcion'=> $validator_l['lenguaje_descripcion'],
         ]);
 
-        return back()->with('lenguajeGuardado', "Lenguaje Guardada");
+        return back()->with('lenguajeGuardado', "Lenguaje Guardado");
     }
 
     //Eliminar lenguaje de programacion

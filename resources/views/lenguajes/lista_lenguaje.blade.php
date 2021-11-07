@@ -17,20 +17,20 @@
 
 
                 <table class="table table-bordered table-striped text-center">
-                    <thead>
-                    <tr style="background-color: #9370D8;">
-                        <th>ID</th>
-                        <th>Descripcion</th>
-                        <th>Acciones</th>
+                    <thead style="background-color: #D8BFD8;">
+                    <tr>
+                        <th class="border border-dark" >ID</th>
+                        <th class="border border-dark" >Descripcion</th>
+                        <th class="border border-dark" >Acciones</th>
                     </tr>
                     </thead>
 
                     <tbody>
                     @foreach($lenguajes as $lenguaje)
                         <tr>
-                            <td>{{$lenguaje->id_lenguaje}}</td>
-                            <td>{{$lenguaje->lenguaje_descripcion}}</td>
-                            <td>
+                            <td class="border border-secondary" >{{$lenguaje->id_lenguaje}}</td>
+                            <td class="border border-secondary" >{{$lenguaje->lenguaje_descripcion}}</td>
+                            <td class="border border-secondary" >
                                 <div class="btn-group"><!--Para que los bonotes-->
 
                                     <a href="{{route('editformLP', $lenguaje->id_lenguaje)}}" class="btn btn-primary mb-3 mr-2">
