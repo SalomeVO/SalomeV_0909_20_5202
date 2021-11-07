@@ -59,7 +59,7 @@
                     <tr class="table-success">
                         <th class="border border-dark" >Logotipo</th>
                         <th class="border border-dark" >Nombre</th>
-                        <th class="border border-dark" >Precio</th>
+                        <th class="border border-dark col-md-2" >Precio</th>
                         <th class="border border-dark" >Descripcion</th>
                         <th class="border border-dark" >Lenguaje de Programacion</th>
                         <th class="border border-dark">Acciones</th>
@@ -74,7 +74,7 @@
                             <img src="{{ asset('storage').'/'. $cripto->logotipo}}" class="img-fluid img-thumbnail"  width="70px">
                         </td>
                         <td class="border border-secondary" >{{$cripto->nombre}}</td>
-                        <td class="border border-secondary" >Q {{$cripto->precio}}</td>
+                        <td class="border border-secondary" >1 = Q {{$cripto->precio}}</td>
                         <td class="border border-secondary" >{{$cripto->descripcion}}</td>
                         <td class="border border-secondary" >{{$cripto->lenguaje_descripcion}}</td><!--para la columna lenguaje_descripcion-->
                         <td class="border border-secondary">
