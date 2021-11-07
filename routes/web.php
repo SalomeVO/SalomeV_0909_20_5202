@@ -32,6 +32,8 @@ Route::get("editform/{id}", "CriptomonedaController@editform")->name('editform')
 Route::patch("/edit/{id}","CriptomonedaController@edit")->name("edit");
 
 //para visualizar la lista de lenguaje de programacion
-Route::get('/lP_ruta', 'CriptomonedaController@lP_ruta')->name('lP_ruta');
+Route::get('/lP_ruta', 'ProgramasController@lP_ruta')->name('lP_ruta');
 
+//para llegar al formulario de lenguaje de programacion
+Route::get("/formLP", "ProgramasController@formLP");
 

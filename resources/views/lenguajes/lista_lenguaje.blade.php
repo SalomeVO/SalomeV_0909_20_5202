@@ -1,10 +1,12 @@
 @extends('layouts.vistaprincipal')
-@section('title', 'Edit C')
+@section('title', 'Tabla LP')
 @section('content')
     <div class="container mt-5" action="{{url('/lP_ruta')}}">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <h2 class="text-center mb-5">Lenguajes de Programacion Registrados</h2>
+
+                <a class="btn btn-success mb-4" href="{{url('/formLP')}}">AGREGAR</a>
 
                 <table class="table table-bordered table-striped text-center">
                     <thead>

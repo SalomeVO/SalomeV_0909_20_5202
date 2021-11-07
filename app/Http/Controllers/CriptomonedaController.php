@@ -99,12 +99,4 @@ class CriptomonedaController extends Controller
 
         return back()->with('criptomonedaModificada','Criptomoneda Modificada');
     }
-
-    //para la lista
-    public function lP_ruta(){
-        $data['lenguajes'] = lenguajeProgramacion::paginate(3);
-
-        return view('lenguajes.lista_lenguaje', $data);
-    }
-
 }
