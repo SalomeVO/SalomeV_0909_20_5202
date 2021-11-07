@@ -6,13 +6,6 @@
         <div class="row justify-content-center">
             <div class="col-md-7 mt-5">
 
-                <!--Mensaje de error-->
-                @if(session("lenguajeModificado"))
-                    <div class="alert alert-success">
-                        {{session("lenguajeModificado")}}
-                    </div>
-                @endif
-
             <!--Validacion de errores-->
                 @if($errors->any())
                     <div class="alert alert-danger">

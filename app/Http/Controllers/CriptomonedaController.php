@@ -33,7 +33,7 @@ class CriptomonedaController extends Controller
     public function save(Request $request)
     {
         $validator = $this->validate($request, [
-            'nombre' => 'required|string|max:45',
+            'nombre' => 'required|string|max:45|unique:criptomoneda',
             'precio' => 'required',
             'descripcion'=>'required|string|max:200',
             'logotipo' => 'required',
@@ -54,7 +54,7 @@ class CriptomonedaController extends Controller
             'lenguaje_id'=> $validator['lenguaje_id'],
         ]);
 
-        return back()->with('criptomonedaGuardado', "Criptomoneda Guardada");
+        return redirect('/')->with('criptomonedaGuardado', "Criptomoneda Guardada");
     }
 
     //Eliminar criptomonedas
@@ -68,7 +68,7 @@ class CriptomonedaController extends Controller
             Criptomoneda::destroy($id);
         }
 
-        return back()->with('criptomonedaEliminado', 'Criptomoneda Eliminado');
+        return redirect('/')->with('criptomonedaEliminado', 'Criptomoneda Eliminado');
     }
 
     //Formulario para editar criptomoneda
@@ -97,6 +97,6 @@ class CriptomonedaController extends Controller
 
         Criptomoneda::where('id', '=', $id)->update($datosCriptomoneda);
 
-        return back()->with('criptomonedaModificada','Criptomoneda Modificada');
+        return redirect('/')->with('criptomonedaModificada',' Criptomoneda Modificada');
     }
 }

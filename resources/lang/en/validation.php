@@ -133,7 +133,8 @@ return [
         'nombre' => [
             'required' => 'El nombre es requerido',
             'string' => 'El nombre de ser un texto',
-            'max:45'=> 'Nombre demasiado largo'
+            'max:45'=> 'Nombre demasiado largo',
+            'unique' => 'Criptomoneda ya ingresada'
         ],
 
         'precio' => [

@@ -31,7 +31,7 @@ class ProgramasController extends Controller
             'lenguaje_descripcion'=> $validator_l['lenguaje_descripcion'],
         ]);
 
-        return back()->with('lenguajeGuardado', "Lenguaje Guardado");
+        return redirect('/lP_ruta')->with('lenguajeGuardado', "Lenguaje Guardado");
     }
 
     //Eliminar lenguaje de programacion
@@ -39,7 +39,7 @@ class ProgramasController extends Controller
 
         lenguajeProgramacion::destroy($id_lenguaje);
 
-        return back()->with('lenguajeEliminado', 'Lenguaje Eliminado');
+        return redirect('/lP_ruta')->with('lenguajeEliminado', 'Lenguaje Eliminado');
     }
 
     //Formulario para editar lenguajes de programacion
@@ -55,6 +55,6 @@ class ProgramasController extends Controller
         $datosLP = request()->except((['_token', '_method']));
         lenguajeProgramacion::where('id_lenguaje', '=', $id_lenguaje)->update($datosLP);
 
-        return back()->with('lenguajeModificado','Lenguaje Modificado');
+        return redirect('/lP_ruta')->with('lenguajeModificado','Lenguaje Modificado');
     }
 }
