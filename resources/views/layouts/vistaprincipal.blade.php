@@ -44,7 +44,7 @@
                       <a class="nav-link text-dark" href="https://github.com/SalomeVO/SalomeV_0909_20_5202.git" >GitHub</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link text-dark" href="https://youtu.be/qrMDMI90jW0" >Video</a>
+                      <a class="nav-link text-dark" href="https://youtu.be/UrhIxepmXfw" >Video</a>
                   </li>
               </ul>
           </div>
