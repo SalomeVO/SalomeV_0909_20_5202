@@ -42,6 +42,12 @@ Route::get('/formLP', "ProgramasController@formLP");
 //para aguardar lenguaje de programacion
 Route::post("/guardar", "ProgramasController@guardar")->name("guardar");
 
-//para eliminar criptomonedas
+//para eliminar lenguaje de programacion
 Route::delete("/deleteLP/{id_lenguaje}","ProgramasController@deleteLP")->name("deleteLP");
+
+//para formulario para editar lenguaje de programacion
+Route::get("editformLP/{id_lenguaje}", "ProgramasController@editformLP")->name('editformLP');
+
+//para editar lenguaje de programacion
+Route::patch("/editLP/{id_lenguaje}","ProgramasController@editLP")->name("editLP");
 

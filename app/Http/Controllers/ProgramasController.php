@@ -41,4 +41,20 @@ class ProgramasController extends Controller
 
         return back()->with('lenguajeEliminado', 'Lenguaje Eliminado');
     }
+
+    //Formulario para editar lenguajes de programacion
+    public function editformLP($id_lenguaje){
+
+        $lenguaje= lenguajeProgramacion::findOrFail($id_lenguaje);
+        return view('lenguajes.editform_lenguaje', compact('lenguaje'));
+    }
+
+    //Editar lenguajes
+    public function editLP(Request $request, $id_lenguaje){
+
+        $datosLP = request()->except((['_token', '_method']));
+        lenguajeProgramacion::where('id_lenguaje', '=', $id_lenguaje)->update($datosLP);
+
+        return back()->with('lenguajeModificado','Lenguaje Modificado');
+    }
 }

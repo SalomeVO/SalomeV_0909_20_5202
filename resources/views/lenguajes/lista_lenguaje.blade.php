@@ -33,6 +33,10 @@
                             <td>
                                 <div class="btn-group"><!--Para que los bonotes-->
 
+                                    <a href="{{route('editformLP', $lenguaje->id_lenguaje)}}" class="btn btn-primary mb-3 mr-2">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+
                                     <form action="{{route('deleteLP', $lenguaje->id_lenguaje)}}" method="POST">
                                         @csrf @method('DELETE')
 
