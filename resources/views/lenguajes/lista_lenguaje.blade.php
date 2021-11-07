@@ -4,7 +4,7 @@
     <div class="container mt-5" action="{{url('/lP_ruta')}}">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <h2 class="text-center mb-5">Lenguajes de Programacion Registrados</h2>
+                <h2 class="text-center mb-5">LENGUAJES DE PROGRAMACION</h2>
 
                 <a class="btn btn-success mb-4" href="{{url('/formLP')}}">AGREGAR</a>
 
@@ -53,13 +53,13 @@
                     </div>
                 @endif
 
-                <table class="table table-bordered table-striped text-center">
+                <table class="table table-striped table-hover text-center">
                     <thead style="background-color: #D8BFD8;">
-                    <tr>
-                        <th class="border border-dark" >ID</th>
-                        <th class="border border-dark" >Descripcion</th>
-                        <th class="border border-dark" >Acciones</th>
-                    </tr>
+                        <tr>
+                            <th class="border border-dark" >ID</th>
+                            <th class="border border-dark" >Descripcion</th>
+                            <th class="border border-dark" >Acciones</th>
+                        </tr>
                     </thead>
 
                     <tbody>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 
-  <body style="background-color: #FFFAF0;" >
+  <body style="background-color: #FFFFF0" >
       <nav class="navbar navbar-expand-lg navbar-light bg-p-3 mb-2 text-white" style="background-color: #87CEFA;">
           <!--Logo de navbar-->
           <a class="navbar-brand" href="{{url('/')}}"><img src="https://umg.edu.gt/assets/umg.png" alt="" width="80" class="rounded-circle"></a>
@@ -24,13 +24,13 @@
               <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Tablas
+                      <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          TABLAS
                       </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F8FF;">
                           <a class="dropdown-item" href="{{url('/')}}">Tabla Criptomoneda</a>
                           <a class="dropdown-item" href="{{url('/')}}">Lista</a>
                           <a class="dropdown-item" href="{{url('/form')}}">Agregar</a>
@@ -39,6 +39,12 @@
                           <a class="dropdown-item" href="{{url('/lP_ruta')}}">Lista</a>
                           <a class="dropdown-item" href="{{url('/formLP')}}">Agregar</a>
                       </div>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-dark" href="https://github.com/SalomeVO/SalomeV_0909_20_5202.git" >GitHub</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-dark" href="https://youtu.be/qrMDMI90jW0" >Video</a>
                   </li>
               </ul>
           </div>

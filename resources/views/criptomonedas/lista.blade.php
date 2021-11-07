@@ -5,7 +5,7 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-11">
-            <h2 class="text-center mb-5">Criptomonedas Registradas</h2>
+            <h2 class="text-center mb-5">CRIPTOMONEDAS</h2>
 
             <a class="btn btn-success mb-4" href="{{url('/form')}}">AGREGAR</a>
 
@@ -54,16 +54,16 @@
                 </div>
             @endif
 
-            <table class="table table-bordered table-striped text-center">
+            <table class="table table-striped table-hover text-center">
                 <thead>
-                <tr class="table-success">
-                    <th class="border border-dark" >Logotipo</th>
-                    <th class="border border-dark" >Nombre</th>
-                    <th class="border border-dark" >Precio</th>
-                    <th class="border border-dark" >Descripcion</th>
-                    <th class="border border-dark" >Lenguaje de Programacion</th>
-                    <th class="border border-dark">Acciones</th>
-                </tr>
+                    <tr class="table-success">
+                        <th class="border border-dark" >Logotipo</th>
+                        <th class="border border-dark" >Nombre</th>
+                        <th class="border border-dark" >Precio</th>
+                        <th class="border border-dark" >Descripcion</th>
+                        <th class="border border-dark" >Lenguaje de Programacion</th>
+                        <th class="border border-dark">Acciones</th>
+                    </tr>
                 </thead>
 
                 <tbody>
@@ -87,7 +87,7 @@
                                 <form action="{{route('delete', $cripto->id)}}" method="POST">
                                     @csrf @method('DELETE')
 
-                                    <button type="submit" onclick="return confirm('¿Seguro de eliminar la criptomoneda?')" class="btn btn-danger">
+                                    <button type="submit"  onclick="return confirm('¿Seguro de eliminar la criptomoneda?')" class="btn btn-danger">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
 

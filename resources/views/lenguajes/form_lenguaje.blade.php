@@ -30,7 +30,8 @@
                             </div>
 
                             <div class="row form-group">
-                                <button type="submit" class="btn btn-success col-md-8 offset-2 text-dark mb-1" style="background-color: #3CB371;">Guardar</button>
+                                <button type="submit" class="btn btn-success col-md-8 offset-2 text-dark mb-2" style="background-color: #3CB371;">Guardar</button>
+
                                 <a class="btn btn-light col-md-8 offset-2 border border-secondary" href="{{url('/lP_ruta')}}" role="button">Regresar</a>
                             </div>
 
